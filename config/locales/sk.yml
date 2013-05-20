@@ -1,0 +1,79 @@
+sk:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+      locations:
+        title: Locations
+      events:
+        title: Events
+    calendar:
+      admin:
+        categories:
+          actions:
+            create_new: Pridať Category
+            reorder: Preusporiadať Categories
+            reorder_done: Koniec radenia Categories
+          records:
+            title: Categories
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Categories. Kliknite na "Pridať
+              Category" pre pridanie prvého category.
+          category:
+            view_live_html: Zobraziť náhľad category<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť category
+            delete: Zmazať category
+        locations:
+          actions:
+            create_new: Pridať Location
+            reorder: Preusporiadať Locations
+            reorder_done: Koniec radenia Locations
+          records:
+            title: Locations
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Locations. Kliknite na "Pridať Location"
+              pre pridanie prvého location.
+          location:
+            view_live_html: Zobraziť náhľad location<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť location
+            delete: Zmazať location
+        events:
+          actions:
+            create_new: Pridať Event
+            reorder: Preusporiadať Events
+            reorder_done: Koniec radenia Events
+          records:
+            title: Events
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Events. Kliknite na "Pridať Event"
+              pre pridanie prvého event.
+          event:
+            view_live_html: Zobraziť náhľad event<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť event
+            delete: Zmazať event
+      categories:
+        show:
+          other: Daľšie Categories
+      locations:
+        show:
+          other: Daľšie Locations
+      events:
+        show:
+          other: Daľšie Events
+  activerecord:
+    attributes:
+      refinery/calendar/category:
+        name: Name
+      refinery/calendar/location:
+        name: Name
+      refinery/calendar/event:
+        name: Name
+        room: Room
+        date: Date
+        host_name: Host Name
+        host_email: Host Email
+        contact_email: Contact Email
+        comment: Comment
+        admission: Admission
+        link: Link
+        published: Published

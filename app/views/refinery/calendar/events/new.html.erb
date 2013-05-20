@@ -1,0 +1,89 @@
+<% content_for :body do %>
+
+  <div class='events'>
+
+    <%= form_for [refinery, :calendar, @event] do |f| %>
+      <%= render '/refinery/admin/error_messages',
+                 :object => @event,
+                 :include_object_name => true  %>
+
+
+        <div class='field'>
+        <%= f.label :name -%>
+        <%= f.text_field :name, :class => 'larger widest' -%>
+      </div>
+
+      <%= f.hidden_field(:location_selection, :value => 0, :id => "location_selection") %>
+
+      <div id='location_select' class='field'>
+        <%= f.label :location_id -%>
+        <%= f.collection_select(:location_id, Refinery::Calendar::Location.all, :id, :name) -%>
+        </br>
+        <a href="#" title="Klicke hier, falls deine Location nicht vorhanden ist" onclick="show_new_location()">Neue Location anlegen</a>
+      </div>
+
+      <div id='new_location' class='field' style="display:none">
+        <%= f.label :new_location -%>
+        <%= f.text_field :new_location %>
+        </br>
+        <a href="#" onclick="show_location_select()">Location auswählen</a>
+      </div>
+
+      <div class='field'>
+        <%= f.label :category_id -%>
+        <%= f.collection_select(:category_id, Refinery::Calendar::Category.all, :id, :name) -%>
+      </div>
+
+      <div class='field'>
+        <%= f.label :room -%>
+        <%= f.text_field :room -%>
+      </div>
+
+      <div class='field'>
+        <%= f.label :date -%>
+        <%= f.datetime_select :date -%>
+      </div>
+
+      <div class='field'>
+        <%= f.label :host_name -%>
+        <%= f.text_field :host_name -%>
+      </div>
+
+      <div class='field'>
+        <%= f.label :host_email -%>
+        <%= f.text_field :host_email -%>
+      </div>
+
+      <div class='field'>
+        <%= f.label :contact_email -%>
+        <%= f.text_field :contact_email -%>
+      </div>
+
+      <div class='field'>
+        <%= f.label :comment -%>
+        <br/>
+        <%= f.text_area :comment -%>
+      </div>
+
+      <div class='field'>
+        <%= f.label :admission -%>
+        <%= f.text_field :admission -%>
+      </div>
+
+      <div class='field'>
+        <%= f.label :link -%>
+        <%= f.text_field :link -%>
+      </div>
+
+      <div class='actions'>
+        <%= f.submit "Event erstellen" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'events' %>
+<% end %>
+
+<%= render '/refinery/content_page' %>

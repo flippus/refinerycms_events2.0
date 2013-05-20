@@ -1,0 +1,82 @@
+nl:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+      locations:
+        title: Locations
+      events:
+        title: Events
+    calendar:
+      admin:
+        categories:
+          actions:
+            create_new: Nieuwe Category toevoegen
+            reorder: De volgorde van de Categories wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Category-volgorde
+          records:
+            title: Categories
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Categories. Druk op 'Nieuwe Category toevoegen'
+              om de eerste toe te voegen.
+          category:
+            view_live_html: Deze category op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze category
+            delete: Deze category definitief verwijderen
+        locations:
+          actions:
+            create_new: Nieuwe Location toevoegen
+            reorder: De volgorde van de Locations wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Location-volgorde
+          records:
+            title: Locations
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Locations. Druk op 'Nieuwe Location toevoegen'
+              om de eerste toe te voegen.
+          location:
+            view_live_html: Deze location op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze location
+            delete: Deze location definitief verwijderen
+        events:
+          actions:
+            create_new: Nieuwe Event toevoegen
+            reorder: De volgorde van de Events wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Event-volgorde
+          records:
+            title: Events
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Events. Druk op 'Nieuwe Event toevoegen'
+              om de eerste toe te voegen.
+          event:
+            view_live_html: Deze event op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
+            edit: Bewerk deze event
+            delete: Deze event definitief verwijderen
+      categories:
+        show:
+          other: Andere Categories
+      locations:
+        show:
+          other: Andere Locations
+      events:
+        show:
+          other: Andere Events
+  activerecord:
+    attributes:
+      refinery/calendar/category:
+        name: Name
+      refinery/calendar/location:
+        name: Name
+      refinery/calendar/event:
+        name: Name
+        room: Room
+        date: Date
+        host_name: Host Name
+        host_email: Host Email
+        contact_email: Contact Email
+        comment: Comment
+        admission: Admission
+        link: Link
+        published: Published

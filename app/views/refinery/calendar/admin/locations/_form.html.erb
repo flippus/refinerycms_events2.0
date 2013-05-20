@@ -1,0 +1,22 @@
+
+<%= form_for [refinery, :calendar_admin, @location] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @location,
+              :include_object_name => true %>
+
+
+
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.locations.admin.locations.location'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @location.name) -%>
+<% end -%>
+

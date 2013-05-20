@@ -1,0 +1,77 @@
+en:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+      locations:
+        title: Locations
+      events:
+        title: Events
+    calendar:
+      admin:
+        categories:
+          actions:
+            create_new: Add New Category
+            reorder: Reorder Categories
+            reorder_done: Done Reordering Categories
+          records:
+            title: Categories
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Categories yet. Click "Add New Category" to
+              add your first category.
+          category:
+            edit: Edit this category
+            delete: Remove this category forever
+        locations:
+          actions:
+            create_new: Add New Location
+            reorder: Reorder Locations
+            reorder_done: Done Reordering Locations
+          records:
+            title: Locations
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Locations yet. Click "Add New Location" to
+              add your first location.
+          location:
+            edit: Edit this location
+            delete: Remove this location forever
+        events:
+          actions:
+            create_new: Add New Event
+            reorder: Reorder Events
+            reorder_done: Done Reordering Events
+          records:
+            title: Events
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Events yet. Click "Add New Event" to add your
+              first event.
+          event:
+            view_live_html: View this event
+            edit: Edit this event
+            delete: Remove this event forever
+      categories:
+        show:
+          other: Other Categories
+      locations:
+        show:
+          other: Other Locations
+      events:
+        show:
+          other: Other Events
+  activerecord:
+    attributes:
+      refinery/calendar/category:
+        name: Name
+      refinery/calendar/location:
+        name: Name
+      refinery/calendar/event:
+        name: Name
+        room: Room
+        date: Date
+        host_name: Host Name
+        host_email: Host Email
+        contact_email: Contact Email
+        comment: Comment
+        admission: Admission
+        link: Link
+        published: Published

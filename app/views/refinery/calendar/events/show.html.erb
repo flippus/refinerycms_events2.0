@@ -1,0 +1,111 @@
+<% content_for :body_content_title do %>
+  <%= @event.name %>
+<% end %>
+
+<% content_for :body do %>
+
+  <section>
+    <h1>Date</h1>
+    <p>
+
+      <%=raw @event.date %>
+
+    </p>
+  </section>
+
+  <section>
+    <h1>Name</h1>
+    <p>
+
+      <%=raw @event.name %>
+
+    </p>
+  </section>
+
+  <h1>Location</h1>
+  <p>
+
+    <%=raw @event.location.name %>
+
+  </p>
+  </section>
+
+  <section>
+      <h1>Category</h1>
+      <p>
+
+        <%=raw @event.category.name %>
+
+      </p>
+    </section>
+
+  <section>
+    <h1>Room</h1>
+    <p>
+
+      <%=raw @event.room %>
+
+    </p>
+  </section>
+
+  <section>
+    <h1>Host Name</h1>
+    <p>
+
+      <%=raw @event.host_name %>
+
+    </p>
+  </section>
+
+  <section>
+    <h1>Contact Email</h1>
+    <p>
+
+      <%=raw @event.contact_email %>
+
+    </p>
+  </section>
+
+  <section>
+    <h1>Comment</h1>
+    <p>
+
+      <%=raw @event.comment %>
+
+    </p>
+  </section>
+
+  <section>
+    <h1>Admission</h1>
+    <p>
+
+      <%=raw @event.admission %>
+
+    </p>
+  </section>
+
+  <section>
+    <h1>Link</h1>
+    <p>
+
+      <%=raw @event.link %>
+
+    </p>
+  </section>
+
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="events">
+      <% @events.each do |event| %>
+        <li>
+          <%= link_to event.name, refinery.calendar_event_path(event) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

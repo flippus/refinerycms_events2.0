@@ -1,0 +1,67 @@
+<%= form_for [refinery, :calendar_admin, @event] do |f| -%>
+
+  <table>
+      <tr>
+        <td><%= "Date:" %></td>
+        <td><%= @event.date %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Name:" %></td>
+        <td><%= @event.name %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Location:" %></td>
+        <td><%= @event.location.name %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Category:" %></td>
+        <td><%= @event.category.name %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Room:" %></td>
+        <td><%= @event.room %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Host Name:" %></td>
+        <td><%= @event.host_name %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Contact Email:" %></td>
+        <td><%= @event.contact_email %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Comment:" %></td>
+        <td><%= @event.comment %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Admission:" %></td>
+        <td><%= @event.admission %></td>
+      </tr>
+
+      <tr>
+        <td><%= "Link:" %></td>
+        <td><%= @event.link %></td>
+      </tr>
+    </font>
+  </table>
+
+  <div class='field'>
+    <%= f.hidden_field(:location_selection, :value => 0) %>
+    <%= f.label :published -%>
+    <%= f.check_box :published, :checked => @event[:published] -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.events.admin.events.event'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @event.name) -%>
+<% end -%>
+

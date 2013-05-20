@@ -1,0 +1,18 @@
+<% content_for :body do %>
+  <%= link_to "Erstelle ein neues Event", refinery.new_calendar_event_path %>
+  <% if (defined? notice) != nil and !notice.blank? %>
+    <p id="notice" style="color: green;"><%= notice %></p>
+  <% end %>
+  <% if (defined? flash[:error]) != nil and !flash[:error].blank? %>
+    <span style="color: red;"><%= simple_format(flash[:error]) %></span>
+  <% end %>
+  <ul id="events">
+    <% @events.each do |event| %>
+      <li>
+        <%= link_to event.name, refinery.calendar_event_path(event) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

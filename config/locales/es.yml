@@ -1,0 +1,82 @@
+es:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+      locations:
+        title: Locations
+      events:
+        title: Events
+    calendar:
+      admin:
+        categories:
+          actions:
+            create_new: Crear nuevo category
+            reorder: Reordenar categories
+            reorder_done: Reordenación de categories completada
+          records:
+            title: Categories
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay categories todavía. Pulsa en "Crear nuevo Category"
+              para crear tu primer category.
+          category:
+            view_live_html: Ver este category como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este category
+            delete: Borrar este category para siempre
+        locations:
+          actions:
+            create_new: Crear nuevo location
+            reorder: Reordenar locations
+            reorder_done: Reordenación de locations completada
+          records:
+            title: Locations
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay locations todavía. Pulsa en "Crear nuevo Location"
+              para crear tu primer location.
+          location:
+            view_live_html: Ver este location como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este location
+            delete: Borrar este location para siempre
+        events:
+          actions:
+            create_new: Crear nuevo event
+            reorder: Reordenar events
+            reorder_done: Reordenación de events completada
+          records:
+            title: Events
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay events todavía. Pulsa en "Crear nuevo Event" para
+              crear tu primer event.
+          event:
+            view_live_html: Ver este event como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este event
+            delete: Borrar este event para siempre
+      categories:
+        show:
+          other: Otros categories
+      locations:
+        show:
+          other: Otros locations
+      events:
+        show:
+          other: Otros events
+  activerecord:
+    attributes:
+      refinery/calendar/category:
+        name: Name
+      refinery/calendar/location:
+        name: Name
+      refinery/calendar/event:
+        name: Name
+        room: Room
+        date: Date
+        host_name: Host Name
+        host_email: Host Email
+        contact_email: Contact Email
+        comment: Comment
+        admission: Admission
+        link: Link
+        published: Published

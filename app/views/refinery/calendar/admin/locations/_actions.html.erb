@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Calendar::Admin::LocationsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.calendar_admin_locations_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_calendar_admin_location_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Calendar::Admin::LocationsController.sortable? && ::Refinery::Calendar::Location.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Locations"),
+                 refinery.calendar_admin_locations_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Locations"),
+                 refinery.calendar_admin_locations_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

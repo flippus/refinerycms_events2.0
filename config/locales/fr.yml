@@ -1,0 +1,79 @@
+fr:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+      locations:
+        title: Locations
+      events:
+        title: Events
+    calendar:
+      admin:
+        categories:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Category
+            reorder: Réordonner les Categories
+            reorder_done: Fin de réordonnancement des Categories
+          records:
+            title: Categories
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Category. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Category" pour créer votre premi(er/ère) category.
+          category:
+            view_live_html: Voir ce(t/tte) category <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) category
+            delete: Supprimer définitivement ce(t/tte) category
+        locations:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Location
+            reorder: Réordonner les Locations
+            reorder_done: Fin de réordonnancement des Locations
+          records:
+            title: Locations
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Location. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Location" pour créer votre premi(er/ère) location.
+          location:
+            view_live_html: Voir ce(t/tte) location <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) location
+            delete: Supprimer définitivement ce(t/tte) location
+        events:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Event
+            reorder: Réordonner les Events
+            reorder_done: Fin de réordonnancement des Events
+          records:
+            title: Events
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Event. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Event" pour créer votre premi(er/ère) event.
+          event:
+            view_live_html: Voir ce(t/tte) event <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) event
+            delete: Supprimer définitivement ce(t/tte) event
+      categories:
+        show:
+          other: Autres Categories
+      locations:
+        show:
+          other: Autres Locations
+      events:
+        show:
+          other: Autres Events
+  activerecord:
+    attributes:
+      refinery/calendar/category:
+        name: Name
+      refinery/calendar/location:
+        name: Name
+      refinery/calendar/event:
+        name: Name
+        room: Room
+        date: Date
+        host_name: Host Name
+        host_email: Host Email
+        contact_email: Contact Email
+        comment: Comment
+        admission: Admission
+        link: Link
+        published: Published

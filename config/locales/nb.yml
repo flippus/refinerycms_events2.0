@@ -1,0 +1,82 @@
+nb:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+      locations:
+        title: Locations
+      events:
+        title: Events
+    calendar:
+      admin:
+        categories:
+          actions:
+            create_new: Lag en ny Category
+            reorder: Endre rekkefølgen på Categories
+            reorder_done: Ferdig å endre rekkefølgen Categories
+          records:
+            title: Categories
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Categories enda. Klikk på "Lag en ny Category"
+              for å legge til din første category.
+          category:
+            view_live_html: Vis hvordan denne category ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne category
+            delete: Fjern denne category permanent
+        locations:
+          actions:
+            create_new: Lag en ny Location
+            reorder: Endre rekkefølgen på Locations
+            reorder_done: Ferdig å endre rekkefølgen Locations
+          records:
+            title: Locations
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Locations enda. Klikk på "Lag en ny Location"
+              for å legge til din første location.
+          location:
+            view_live_html: Vis hvordan denne location ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne location
+            delete: Fjern denne location permanent
+        events:
+          actions:
+            create_new: Lag en ny Event
+            reorder: Endre rekkefølgen på Events
+            reorder_done: Ferdig å endre rekkefølgen Events
+          records:
+            title: Events
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Events enda. Klikk på "Lag en ny Event" for
+              å legge til din første event.
+          event:
+            view_live_html: Vis hvordan denne event ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne event
+            delete: Fjern denne event permanent
+      categories:
+        show:
+          other: Andre Categories
+      locations:
+        show:
+          other: Andre Locations
+      events:
+        show:
+          other: Andre Events
+  activerecord:
+    attributes:
+      refinery/calendar/category:
+        name: Name
+      refinery/calendar/location:
+        name: Name
+      refinery/calendar/event:
+        name: Name
+        room: Room
+        date: Date
+        host_name: Host Name
+        host_email: Host Email
+        contact_email: Contact Email
+        comment: Comment
+        admission: Admission
+        link: Link
+        published: Published
