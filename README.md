@@ -2,4 +2,4 @@ A plugin for refinerycms 2.0 to manage and publish events with specific attribut
 
 ### License
 
-(MIT)[https://github.com/flippus/refinerycms_events2.0/blob/master/LICENSE]
+[MIT](https://github.com/flippus/refinerycms_events2.0/blob/master/LICENSE)
